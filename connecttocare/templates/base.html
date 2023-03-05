@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}">
+    <!-- style css -->
+    <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <!-- fevicon -->
+    <link rel="icon" href="{% static '/images/icon-6.png' %}" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/jquery.mCustomScrollbar.min.css' %}">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen">
+
+    {% block cssLinks %}
+    {% endblock %}
+</head>
+
+<body>
+    <!-- header section start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="logo"><a href="/"><img src="{% static 'images/icon-7.png' %}" /> Connect to Care</a></div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/patient-login/">Patient Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/doctor-login/">Doctor Login</a>
+                </li>
+
+
+            </ul>
+        </div>
+    </nav>
+    <!-- header section end -->
+
+    {% block body %}{% endblock %}
+
+
+    <!-- footer section start -->
+    <div class="footer_section layout_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer_logo"><a style="color: aliceblue;" href="index.html"><img
+                                src="{% static 'images/icon-7.png' %}"> Connect to Care</a></div>
+                    <h1 class="adderss_text">Contact Us</h1>
+                    <div class="map_icon"><img src="{% static 'images/map-icon.png' %}"><span
+                            class="paddlin_left_0">FCRIT, Comp Dept</span></div>
+                    <div class="map_icon"><img src="{% static 'images/call-icon.png' %}"><span
+                            class="paddlin_left_0">+91 9372886194</span></div>
+                    <div class="map_icon"><img src="{% static 'images/mail-icon.png' %}"><span
+                            class="paddlin_left_0">aakashcoder1210@gmail.com</span></div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <h1 class="adderss_text">Our Doctors</h1>
+                    <div class="hiphop_text_1">Our Doctors are very highly skilled individuals which are placed on the
+                        network after strict verification by our team of experts.</div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <h1 class="adderss_text">Useful Links</h1>
+                    <div class="Useful_text">
+
+                        <a id="footerlink" href="/">Home</a><br>
+                        <a id="footerlink" href="/patient-login">Patient Login</a><br>
+
+                        <a id="footerlink" href="/doctor-login">Doctor Login</a>
+
+                        <style>
+                            #footerlink {
+                                color: azure;
+                            }
+
+                            #footerlink:hover {
+                                color: rgb(134, 134, 134);
+                            }
+                        </style>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-sm-6">
+                        <h1 class="adderss_text">Newsletter</h1>
+                        <input type="text" class="Enter_text" placeholder="Enter your Email" name="Enter your Emil">
+                        <div class="subscribe_bt"><a href="#">Subscribe</a></div>
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href="#"><img src="{% static 'images/fb-icon.png' %}"></a></li>
+                                <li><a href="#"><img src="{% static 'images/twitter-icon.png' %}"></a></li>
+                                <li><a href="#"><img src="{% static 'images/linkedin-icon.png' %}"></a></li>
+                                <li><a href="#"><img src="{% static 'images/instagram-icon.png' %}"></a></li>
+                            </ul>
+                        </div>
+                    </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- footer section end -->
+
+    <!-- Javascript files-->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+    <script src="{% static 'js/plugin.js' %}"></script>
+    <!-- sidebar -->
+    <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <!-- javascript -->
+    <script src="{% static 'js/owl.carousel.js' %}"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+</body>
+
+</html>
